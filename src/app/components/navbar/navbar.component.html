@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <a [routerLink]="['']" routerLinkActive="router-link-active" mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_books</mat-icon>
+        <span>Portal de examenes</span>
+    </a>
+
+    <span class="example-spacer"></span>
+
+    <a [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon log"
+        aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+        <span>Iniciar sesion</span>
+    </a>
+
+    <a [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon sign"
+        aria-label="Example icon-button with heart icon">
+        <mat-icon>person add</mat-icon>
+        <span>Registrar</span>
+    </a>
+</mat-toolbar>

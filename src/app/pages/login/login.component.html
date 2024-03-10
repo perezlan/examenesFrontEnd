@@ -1,0 +1,37 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                    <div class="container text-center">
+                        <img src="../../../assets/images/account.png" width="100" height="100">
+                    </div>
+
+                    <h1 class="text-center">Inicio de sesion</h1>
+                    <form (ngSubmit)="formSumbit()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Usuario</mat-label>
+                            <input matInput [(ngModel)]="user" name="user" placeholder="Digite su nombre de usuario"
+                                required>
+                            <mat-hint>Usuario que ya haya creado</mat-hint>
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Digite su password"
+                                [(ngModel)]="password" name="password" required>
+                            <mat-hint>password ded acuerdo al usuario</mat-hint>
+                        </mat-form-field>
+
+                        <br><br><br>
+                        <div class="container text-center">
+                            <button mat-raised-button color="primary">Iniciar Sesion</button>
+                            <button mat-raised-button color=" accent" style="margin-left:20px;">Limpiar</button>
+                        </div>
+
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

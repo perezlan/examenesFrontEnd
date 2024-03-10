@@ -1,0 +1,11 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.log {
+  margin-right: 150px;
+}
+
+.sign {
+  margin-right: 100px;
+}
