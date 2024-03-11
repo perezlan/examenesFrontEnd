@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms'; //libreria par el ngModel
 import { MatButtonModule } from '@angular/material/button'; //botones
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginService } from '../../services/login.service';
+import { AuthInterceptorProviders } from '../../services/auth.interceptor';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ import { LoginService } from '../../services/login.service';
     MatButtonModule,
     FormsModule,
   ],
+  providers: [AuthInterceptorProviders],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
@@ -46,6 +48,11 @@ export class LoginComponent {
       (resp: any) => {
         this.token = resp.token;
         console.log(this.token);
+
+        this.loginService.login(this.token);
+        this.loginService.getCurrentUser().subscribe((user: any) => {
+          console.log(user);
+        });
       },
       (error: any) => {
         console.log('usuario o contrasena incorrectos ' + error);

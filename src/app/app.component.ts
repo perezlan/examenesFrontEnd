@@ -6,6 +6,7 @@ import { MatButton } from '@angular/material/button';
 import { MatTooltip } from '@angular/material/tooltip';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { AuthInterceptorProviders } from './services/auth.interceptor';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     NavbarComponent,
     SignupComponent,
   ],
+  providers: [AuthInterceptorProviders],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
